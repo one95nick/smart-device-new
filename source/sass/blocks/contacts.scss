@@ -12,6 +12,7 @@
 
 .contacts__list {
   display: flex;
+  flex-wrap: wrap;
   align-content: center;
   margin: 0;
   margin-top: -10px;

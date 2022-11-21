@@ -7,3 +7,4 @@ const footerToggle = document.querySelector('.footer__toggle');
 callbackModalOpenButton.addEventListener('click', () => callbackModal.classList.add('is-active'));
 callbackModalCloseButton.addEventListener('click', () => callbackModal.classList.remove('is-active'));
 footerToggle.addEventListener('click', () => footerMenu.classList.toggle('is-active'));
+
