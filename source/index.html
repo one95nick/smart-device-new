@@ -42,7 +42,7 @@
           </a>
         </li>
         <li  class="contacts__list-item contacts__list-item--button">
-          <a class="contacts__link contacts__link--button button button--callback" href="#">
+          <a class="contacts__link contacts__link--button button button--callback" data-open-modal="callback" href="#">
             Заказать звонок
           </a>
         </li>
@@ -51,7 +51,7 @@
     <div class="header__banner banner wrapper">
       <h2>Печатные платы</h2>
       <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
-      <a class="banner__button button button--callback" href="#">
+      <a class="banner__button button button--callback" data-open-modal="callback" href="#">
         <span class="banner__button-text banner__button-text--desktop">Получить бесплатную консультацию</span>
         <span class="banner__button-text banner__button-text--mobile">Бесплатная консультация</span></a>
     </div>
@@ -138,37 +138,38 @@
         </form>
       </div>
     </section>
-    <!-- открывается при добавлении классу modal класса is-active -->
-    <div class="modal">
-      <div class="modal__wrapper">
-        <h3>Закажите звонок</h3>
-        <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
-        <button class="modal__close" type="button"></button>
-        <form class="modal__callback-form callback-form callback-form--modal" action="#" method="post">
-          <div class="callback-form__input-wrapper callback-form__input-wrapper--modal">
-            <label class="visually-hidden" for="modal-name">Имя</label>
-            <input type="text" name="user-name" id="modal-name" placeholder="Имя" aria-label="Укажите ваше имя" required>
-            <label class="visually-hidden" for="modal-phone">Контактный номер</label>
-            <input type="tel" name="user-phone" id="modal-phone" placeholder="Телефон" aria-label="Укажите номер вашего телефона" required>
-          </div>
-          <label class="visually-hidden" for="modal-question">Ваш вопрос</label>
-          <textarea name="user-question" id="modal-question" placeholder="Ваш вопрос" aria-label="Укажите ваш вопрос" required></textarea>
-          <div class="callback-form__submit-wrapper callback-form__submit-wrapper--modal">
-            <button class="callback-form__btn callback-form__btn--modal button" type="submit" aria-label="Нажмите, чтобы оставить заявку">
-              Отправить
-            </button>
-            <label class="modal__agreement form-agreement">
-              <input class="form-agreement__input visually-hidden" type="checkbox" name="user-agreement" aria-label="Укажите согласие на обработку персональных данных" required checked>
-              <span class="form-agreement__checkbox"></span>
-              <span class="form-agreement__text">
-                Я согласен на обработку персональных данных
-              </span>
-            </label>
-          </div>
-        </form>
-      </div>
-    </div>
   </main>
+  <!-- открывается при добавлении классу modal класса is-active -->
+  <div class="modal" data-modal="callback">
+    <div class="modal__overlay" data-close-modal=""></div>
+    <div class="modal__wrapper">
+      <h3>Закажите звонок</h3>
+      <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+      <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal=""></button>
+      <form class="modal__callback-form callback-form callback-form--modal" action="https://echo.htmlacademy.ru/" method="post">
+        <div class="callback-form__input-wrapper callback-form__input-wrapper--modal">
+          <label class="visually-hidden" for="modal-name">Имя</label>
+          <input type="text" name="user-name" id="modal-name" placeholder="Имя" aria-label="Укажите ваше имя" required>
+          <label class="visually-hidden" for="modal-phone">Контактный номер</label>
+          <input type="tel" name="user-phone" id="modal-phone" placeholder="Телефон" aria-label="Укажите номер вашего телефона" pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" required>
+        </div>
+        <label class="visually-hidden" for="modal-question">Ваш вопрос</label>
+        <textarea name="user-question" id="modal-question" placeholder="Ваш вопрос" aria-label="Укажите ваш вопрос" required></textarea>
+        <div class="callback-form__submit-wrapper callback-form__submit-wrapper--modal">
+          <button class="callback-form__btn callback-form__btn--modal button" type="submit" aria-label="Нажмите, чтобы оставить заявку">
+            Отправить
+          </button>
+          <label class="modal__agreement form-agreement">
+            <input class="form-agreement__input visually-hidden" type="checkbox" name="user-agreement" aria-label="Укажите согласие на обработку персональных данных" required checked>
+            <span class="form-agreement__checkbox"></span>
+            <span class="form-agreement__text">
+              Я согласен на обработку персональных данных
+            </span>
+          </label>
+        </div>
+      </form>
+    </div>
+  </div>
   <footer class="footer">
     <div class="footer__wrapper wrapper">
       <section class="footer__social social">
@@ -242,7 +243,7 @@
         </nav>
         <div class="footer__contacts">
           <h3 class="footer__title">Наш офис</h3>
-          <div class="footer__menu is-active">
+          <div class="footer__menu">
             <button class="footer__toggle" type="button" aria-label="открыть/закрыть список">
               <svg class="footer__open-icon" width="15" height="15">
                 <use xlink:href="img/sprite.svg#plus"></use>
@@ -270,6 +271,7 @@
       </div>
     </div>
   </footer>
+  <script src="./js/vendor.min.js"></script>
   <script src="./js/main.min.js"></script>
 </body>
 

@@ -18,6 +18,7 @@
 
   @media (max-width: $max-tablet-width) {
     flex-direction: column;
+    flex-grow: 1;
   }
 }
 
@@ -103,11 +104,11 @@
       content: "";
       position: absolute;
       top: -3px;
-      left: -30px;
+      left: -25px;
       z-index: 1;
 
       display: block;
-      width: 325px;
+      width: 100vw;
       height: 1px;
 
       background-color: rgba($color-white, 0.7);
@@ -125,11 +126,11 @@
       content: "";
       position: absolute;
       top: 0;
-      left: -30px;
+      left: -25px;
       z-index: 1;
 
       display: block;
-      width: 325px;
+      width: 100vw;
       height: 1px;
 
       background-color: rgba($color-white, 0.7);
@@ -139,11 +140,11 @@
       content: "";
       position: absolute;
       bottom: 0;
-      left: -30px;
+      left: -25px;
       z-index: 1;
 
       display: block;
-      width: 325px;
+      width: 100vw;
       height: 1px;
 
       background-color: rgba($color-white, 0.7);
