@@ -1,7 +1,7 @@
 .banner {
   padding-top: 185px;
   padding-bottom: 283px;
-  padding-left: 475px;
+  padding-left: 125px;
 
   color: $color-white;
 
@@ -13,7 +13,7 @@
 
   @media (max-width: $max-mobile-width) {
     padding-bottom: 190px;
-    padding-left: 25px;
+    padding-left: 0;
   }
 }
 

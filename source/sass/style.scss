@@ -12,12 +12,14 @@
 @import "mixins";
 @import "global/fonts";
 @import "global/reboot";
+@import "global/container";
 
 // Blocks
 // ---------------------------------
 
 @import "./blocks/wrapper.scss";
 @import "./blocks/visually-hidden.scss";
+@import "./blocks/page-wrapper.scss";
 @import "./blocks/header.scss";
 @import "./blocks/contacts.scss";
 @import "./blocks/banner.scss";

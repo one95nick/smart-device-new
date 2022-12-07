@@ -4,6 +4,9 @@ import {initModals} from './modules/modals/init-modals';
 
 
 const footerToggle = document.querySelectorAll('.footer__toggle');
+const footerMenu = document.querySelector('.footer__menu');
+
+footerMenu.classList.remove('no-js');
 
 footerToggle.forEach((btn) => {
   btn.addEventListener('click', () => {

@@ -1,7 +1,9 @@
 .footer {
   display: flex;
+  flex: 0 0 auto;
   padding-top: 50px;
   padding-bottom: 55px;
+  overflow: hidden;
 
   color: $color-white;
 
@@ -17,13 +19,17 @@
   margin: 0;
 
   @media (max-width: $max-tablet-width) {
-    flex-direction: column;
     flex-grow: 1;
+    flex-direction: column;
   }
 }
 
 .footer__nav {
-  margin-right: 77px;
+  margin-right: 15%;
+
+  @media (max-width: $vp-1280) {
+    margin-right: 3%;
+  }
 
   @media (max-width: $max-tablet-width) {
     margin-right: 148px;
@@ -159,7 +165,8 @@
     display: none;
   }
 
-  .footer__menu.is-active .footer__list {
+  .footer__menu.is-active .footer__list,
+  .footer__menu.no-js .footer__list {
     display: block;
   }
 

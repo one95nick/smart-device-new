@@ -1,6 +1,10 @@
 .contacts {
+  position: fixed;
+  z-index: 5;
+
   display: flex;
   align-items: center;
+  width: 100%;
 
   background: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
 
@@ -32,7 +36,7 @@
 .contacts__list-item:not(:last-child) {
   margin-right: 91px;
 
-  @media (max-width: $max-tablet-width) {
+  @media (max-width: $vp-1280) {
     margin: 0;
   }
 }
@@ -58,7 +62,7 @@
   }
 
   &:hover {
-    border: 1px solid $color-white;
+    outline: 1px solid;
     border-radius: 3px;
   }
 
@@ -73,7 +77,7 @@
   }
 
   &--button {
-    margin-left: 60px;
+    margin-left: auto;
 
     font-weight: 700;
     font-size: 14px;
@@ -97,11 +101,14 @@
 }
 
 .contacts__logo {
-  margin-right: 145px;
+  flex-shrink: 0;
+  margin-right: 13%;
   padding: 30px 0 35px 0;
 
+  cursor: pointer;
+
   @media (max-width: $max-tablet-width) {
-    margin-right: 326px;
+    margin-right: 49%;
     padding-top: 20px;
     padding-bottom: 25px;
   }
@@ -109,7 +116,7 @@
   @media (max-width: $max-mobile-width) {
     width: 35px;
     height: 35px;
-    margin-right: 114px;
+    margin-right: 42%;
     padding-top: 6px;
     padding-bottom: 45px;
   }

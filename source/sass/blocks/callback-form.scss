@@ -26,7 +26,7 @@
 }
 
 .callback-form__input-wrapper input {
-  width: 275px;
+  width: 48%;
   height: 50px;
   padding-left: 15px;
 
@@ -36,12 +36,12 @@
   border: none;
   border-radius: 3px;
 
-  @media (max-width: $max-tablet-width) {
-    width: 320px;
-  }
-
   @media (max-width: $max-mobile-width) {
     width: 100%;
+  }
+
+  &:hover {
+    opacity: 0.5;
   }
 }
 
@@ -50,6 +50,10 @@
 
   &:not(:last-child) {
     margin-bottom: 20px;
+  }
+
+  &:hover {
+    opacity: 0.5;
   }
 }
 
@@ -61,7 +65,7 @@
 }
 
 .callback-form textarea {
-  min-width: 580px;
+  min-width: 100%;
   min-height: 155px;
   margin-bottom: 30px;
   padding-top: 25px;
@@ -72,6 +76,10 @@
   background-color: rgba($color-dark-blue, 0.15);
   border: none;
   border-radius: 3px;
+
+  &:hover {
+    opacity: 0.5;
+  }
 
   @media (max-width: $max-tablet-width) {
     min-width: 100%;
@@ -113,12 +121,16 @@
 
 .callback-form--modal textarea {
   min-width: 100%;
+
+  &:hover {
+    opacity: 0.5;
+  }
 }
 
 .callback-form__btn {
-  width: 265px;
+  width: 48%;
   margin-right: 50px;
-  padding: 13px 75px;
+  padding: 13px 11%;
 
   font-weight: 700;
   font-size: 16px;
@@ -131,6 +143,7 @@
   background-color: $color-dark-blue;
   border: none;
   border-radius: 3px;
+  cursor: pointer;
 
   @media (max-width: $max-tablet-width) {
     margin-right: 85px;

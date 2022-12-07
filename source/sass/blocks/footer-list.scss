@@ -9,6 +9,9 @@
 
   list-style: none;
 
+  @media (max-width: $vp-1280) {
+    min-width: 340px;
+  }
 
   @media (max-width: $max-tablet-width) {
     min-width: 200px;
@@ -27,6 +30,10 @@
 
   opacity: 0.7;
 
+  @media (max-width: $vp-1280) {
+    margin-right: 10px;
+  }
+
   @media (max-width: $max-tablet-width) {
     margin-right: 0;
   }
@@ -40,7 +47,7 @@
 
 .footer-list__link {
   &:hover {
-    border-bottom: 1px solid $color-light-blue;
+    opacity: 0.5;
   }
 
   &:active {

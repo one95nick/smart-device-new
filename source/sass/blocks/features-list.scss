@@ -14,11 +14,11 @@
 }
 
 .features-list__item {
+  position: relative;
+
   min-height: 300px;
   padding: 100px 45px 35px 40px;
 
-  background-repeat: no-repeat;
-  background-position: 44px 40px;
   border: 1px solid $color-whisper;
   border-left: 5px solid $color-light-blue;
 
@@ -37,41 +37,25 @@
     background-size: 30px 30px;
   }
 
-
-  &--speed {
-    background-image: url("../img/svg/stopwatch.svg");
-  }
-
   &--supply {
-    background-image: url("../img/svg/hired.svg");
-
     @media (max-width: $max-mobile-width) {
       background-position: 25px 30px;
     }
   }
 
   &--secret {
-    background-image: url("../img/svg/detective.svg");
-
     @media (max-width: $max-tablet-width) {
       padding-top: 87px;
-
-      background-position: 36px 38px;
     }
 
     @media (max-width: $max-mobile-width) {
       min-height: 325px;
       padding-top: 78px;
       padding-bottom: 10px;
-
-      background-position: 25px 30px;
     }
   }
 
   &--price {
-    background-image: url("../img/svg/tag.svg");
-
-
     @media (max-width: $max-tablet-width) {
       padding-top: 85px;
     }
@@ -79,16 +63,14 @@
     @media (max-width: $max-mobile-width) {
       min-height: 325px;
       padding-top: 78px;
-
-      background-position: 25px 30px;
     }
   }
 
-  &--extra {
+  &:hover {
     padding-left: 45px;
 
     background-color: $color-light-blue;
-    border: none;
+    border: transparent;
 
     @media (max-width: $max-mobile-width) {
       padding-left: 30px;
@@ -149,7 +131,18 @@
   }
 }
 
-.features-list__item--extra h3,
-.features-list__item--extra p {
+.features-list__item:hover .features-list__title,
+.features-list__item:hover .features-list__description {
   color: $color-white;
+}
+
+.features-list__item-icon {
+  fill: $color-light-blue;
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+
+.features-list__item:hover .features-list__item-icon {
+  fill: $color-white;
 }

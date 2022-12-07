@@ -2,7 +2,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 10;
 
   display: none;
   width: 100%;
@@ -62,6 +62,10 @@
   padding: 38px;
 
   background-color: $color-light-blue;
+
+  @media (max-height: 760px) {
+    margin-top: 0;
+  }
 }
 
 .modal__close-btn {

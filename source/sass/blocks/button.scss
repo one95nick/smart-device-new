@@ -3,4 +3,8 @@
   color: $color-white;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+
+  &:hover {
+    opacity: 0.5;
+  }
 }
