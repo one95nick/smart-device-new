@@ -9,6 +9,12 @@ const aboutButton = document.querySelector('.about__button');
 const aboutButtonText = document.querySelector('.about__button > span');
 const descriptionExtra = document.querySelector('.about__description--extra');
 
+const tel = document.querySelectorAll('[name="user-phone"]');
+let maskOptions = {
+  mask: '+{7}(000)000-00-00'
+};
+let mask = IMask(tel, maskOptions);
+
 
 aboutButton.addEventListener('click', () => descriptionExtra.classList.toggle('is-active'));
 
@@ -30,6 +36,7 @@ aboutButton.addEventListener('click', () => descriptionExtra.classList.toggle('i
 //     aboutButtonText.innerText = 'Свернуть';
 //   }
 // });
+
 
 footerMenu.classList.remove('no-js');
 
