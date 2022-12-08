@@ -5,6 +5,31 @@ import {initModals} from './modules/modals/init-modals';
 
 const footerToggle = document.querySelectorAll('.footer__toggle');
 const footerMenu = document.querySelector('.footer__menu');
+const aboutButton = document.querySelector('.about__button');
+const aboutButtonText = document.querySelector('.about__button > span');
+const descriptionExtra = document.querySelector('.about__description--extra');
+
+
+aboutButton.addEventListener('click', () => descriptionExtra.classList.toggle('is-active'));
+
+// первый способ
+
+// aboutButtonText.addEventListener('click', function () {
+//   aboutButtonText.innerHTML =
+//     (aboutButtonText.innerHTML === 'Подробнее') ? aboutButtonText.innerHTML = 'Свернуть' : aboutButtonText.innerHTML = 'Подробнее';
+// });
+
+// второй способ
+
+// aboutButtonText.addEventListener('click', function () {
+//   if (aboutButtonText.innerText.toLowerCase() === 'свернуть') {
+//     aboutButtonText.innerText = 'Подробнее';
+//   }
+
+//   else {
+//     aboutButtonText.innerText = 'Свернуть';
+//   }
+// });
 
 footerMenu.classList.remove('no-js');
 

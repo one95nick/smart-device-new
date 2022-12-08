@@ -1,7 +1,6 @@
 .about {
   padding-top: 13px;
   padding-bottom: 80px;
-  // padding-left: 5%;
 
   color: $color-dark-blue;
 
@@ -89,17 +88,16 @@
     }
   }
 
-  &--more {
+  &--extra {
     display: none;
   }
 
-  &--more.is-active {
+  &--extra.is-active {
     display: block;
   }
 }
 
 .about__button {
-  display: inline-block;
   padding: 13px 53px;
 
   font-weight: 700;
@@ -111,6 +109,7 @@
   text-transform: uppercase;
   letter-spacing: 0.05em;
 
+  background-color: transparent;
   border: 1px solid $color-light-blue;
   border-radius: 3px;
 
