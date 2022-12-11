@@ -1,53 +1,56 @@
 
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
-
+import IMask from 'imask';
 
 const footerToggle = document.querySelectorAll('.footer__toggle');
-const footerMenu = document.querySelector('.footer__menu');
+const footerMenu = document.querySelectorAll('.footer__menu');
 const aboutButton = document.querySelector('.about__button');
-const aboutButtonText = document.querySelector('.about__button > span');
 const descriptionExtra = document.querySelector('.about__description--extra');
 
-const tel = document.querySelectorAll('[name="user-phone"]');
-let maskOptions = {
-  mask: '+{7}(000)000-00-00'
-};
-let mask = IMask(tel, maskOptions);
+aboutButton.addEventListener('click', () => {
+  descriptionExtra.classList.toggle('is-active');
+  if (descriptionExtra.classList.contains('is-active')) {
+    aboutButton.textContent = 'Свернуть';
+  } else {
+    aboutButton.textContent = 'Подробнее';
+  }
+});
 
 
-aboutButton.addEventListener('click', () => descriptionExtra.classList.toggle('is-active'));
+footerMenu.forEach((menu) => {
+  menu.classList.remove('no-js');
+});
 
-// первый способ
+let acc = document.querySelectorAll('.accordeon');
 
-// aboutButtonText.addEventListener('click', function () {
-//   aboutButtonText.innerHTML =
-//     (aboutButtonText.innerHTML === 'Подробнее') ? aboutButtonText.innerHTML = 'Свернуть' : aboutButtonText.innerHTML = 'Подробнее';
-// });
-
-// второй способ
-
-// aboutButtonText.addEventListener('click', function () {
-//   if (aboutButtonText.innerText.toLowerCase() === 'свернуть') {
-//     aboutButtonText.innerText = 'Подробнее';
-//   }
-
-//   else {
-//     aboutButtonText.innerText = 'Свернуть';
-//   }
-// });
-
-
-footerMenu.classList.remove('no-js');
-
-footerToggle.forEach((btn) => {
-  btn.addEventListener('click', () => {
-    btn.closest('.footer__menu').classList.toggle('is-active');
+acc.forEach(item => {
+  item.addEventListener('click', e => {
+    if (e.target.classList.contains('is-active')) {
+      e.target.classList.remove('is-active');
+      return;
+    }
+    acc.forEach(e=>e.classList.remove('is-active'));
+    e.target.classList.add('is-active');
   });
 });
+
+// footerToggle.forEach((btn) => {
+//   btn.addEventListener('click', () => {
+//     btn.closest('.footer__menu').classList.toggle('is-active');
+//   });
+// });
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
+
+  const tel = document.querySelectorAll('[name="user-phone"]');
+
+  tel.forEach((elem) => {
+    IMask(elem, {
+      mask: '+{7}(000)000-00-00',
+    });
+  });
 
   // Utils
   // ---------------------------------

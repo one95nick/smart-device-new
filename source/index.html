@@ -50,7 +50,7 @@
       <div class="wrapper">
         <h2>Печатные платы</h2>
         <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
-        <a class="banner__button button button--callback" data-open-modal="callback" href="#">
+        <a class="banner__button button button--callback" href="#callback">
           <span class="banner__button-text banner__button-text--desktop">Получить бесплатную консультацию</span>
           <span class="banner__button-text banner__button-text--mobile">Бесплатная консультация</span>
         </a>
@@ -146,7 +146,7 @@
           </ul>
         </div>
       </section>
-      <section class="callback">
+      <section class="callback" id="callback">
         <h2 class="visually-hidden">Бесплатная консультация по телефону</h2>
         <div class="wrapper">
           <div class="callback__wrapper ">
@@ -155,9 +155,9 @@
             <form class="callback__form callback-form" action="https://echo.htmlacademy.ru/" method="post">
               <div class="callback-form__input-wrapper">
                 <label class="visually-hidden" for="name">Имя</label>
-                <input type="text" name="user-name" id="name" placeholder="Имя" aria-label="Укажите ваше имя" minlength="2" maxlength="20" required>
+                <input type="text" name="user-name" id="name" placeholder="Имя" aria-label="Укажите ваше имя" minlength="2" pattern="^([А-Я]{1}[а-яё]{1,23}|[A-Z]{1}[a-z]{1,23})$" required>
                 <label class="visually-hidden" for="phone">Контактный номер</label>
-                <input type="text" name="user-phone" id="phone" placeholder="Телефон" aria-label="Укажите номер вашего телефона" required>
+                <input type="text" name="user-phone" id="phone" placeholder="Телефон" aria-label="Укажите номер вашего телефона" pattern="[\+]\d{1}[\(]\d{3}[\)]\d{3}[\-]\d{2}[\-]\d{2}" required>
               </div>
               <label class="visually-hidden" for="question">Ваш вопрос</label>
               <textarea name="user-question" id="question" placeholder="Ваш вопрос" aria-label="Укажите ваш вопрос"></textarea>
@@ -215,16 +215,16 @@
         </section>
         <div class="footer__nav-wrapper">
           <nav class="footer__nav footer-nav">
-            <h3 class="footer__title">Разделы сайта</h3>
             <div class="footer__menu no-js">
-              <button class="footer__toggle" type="button" aria-label="открыть/закрыть список">
+              <h3 class="footer__title accordeon">Разделы сайта</h3>
+              <!-- <button class="footer__toggle" type="button" aria-label="открыть/закрыть список">
                 <svg class="footer__open-icon" width="15" height="15">
                   <use xlink:href="img/sprite.svg#plus"></use>
                 </svg>
                 <svg class="footer__close-icon" width="15" height="15">
                   <use xlink:href="img/sprite.svg#minus"></use>
                 </svg>
-              </button>
+              </button> -->
               <ul class="footer__list footer-list">
                 <li class="footer-list__item">
                   <a class="footer-list__link" href="#">О Компании</a>
@@ -250,17 +250,17 @@
               </ul>
             </div>
           </nav>
-          <div class="footer__contacts">
-            <h3 class="footer__title">Наш офис</h3>
+          <div class="footer__contacts accordeon">
             <div class="footer__menu no-js">
-              <button class="footer__toggle" type="button" aria-label="открыть/закрыть список">
+              <h3 class="footer__title accordeon">Наш офис</h3>
+              <!-- <button class="footer__toggle" type="button" aria-label="открыть/закрыть список">
                 <svg class="footer__open-icon" width="15" height="15">
                   <use xlink:href="img/sprite.svg#plus"></use>
                 </svg>
                 <svg class="footer__close-icon" width="15" height="15">
                   <use xlink:href="img/sprite.svg#minus"></use>
                 </svg>
-              </button>
+              </button> -->
               <ul class="footer__list footer-list">
                 <li class="footer-list__item">
                   г. Мытищи, Олимпийский проспект,<br> д.10
@@ -292,9 +292,9 @@
     <form class="modal__callback-form callback-form callback-form--modal" action="https://echo.htmlacademy.ru/" method="post">
       <div class="callback-form__input-wrapper callback-form__input-wrapper--modal">
         <label class="visually-hidden" for="modal-name">Имя</label>
-        <input type="text" name="user-name" id="modal-name" placeholder="Имя" aria-label="Укажите ваше имя" minlength="2" maxlength="20" required>
+        <input type="text" name="user-name" id="modal-name" placeholder="Имя" aria-label="Укажите ваше имя" minlength="2" pattern="^([А-Я]{1}[а-яё]{1,23}|[A-Z]{1}[a-z]{1,23})$" required>
         <label class="visually-hidden" for="modal-phone">Контактный номер</label>
-        <input type="text" name="user-phone" id="modal-phone" placeholder="Телефон" aria-label="Укажите номер вашего телефона" required>
+        <input type="text" name="user-phone" id="modal-phone" placeholder="Телефон" aria-label="Укажите номер вашего телефона" pattern="[\+]\d{1}[\(]\d{3}[\)]\d{3}[\-]\d{2}[\-]\d{2}" required>
       </div>
       <label class="visually-hidden" for="modal-question">Ваш вопрос</label>
       <textarea name="user-question" id="modal-question" placeholder="Ваш вопрос" aria-label="Укажите ваш вопрос"></textarea>

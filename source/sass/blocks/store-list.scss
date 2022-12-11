@@ -15,6 +15,10 @@
 
 .store-list__item {
   width: 30%;
+
+  @media (max-width: $max-tablet-width) {
+    width: 100%;
+  }
 }
 
 .store-list__card {

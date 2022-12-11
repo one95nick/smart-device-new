@@ -89,12 +89,7 @@
     border: none;
 
     &:hover {
-      border: 1px solid $color-light-blue;
-      border-radius: 50%;
-    }
-
-    &:active {
-      background-color: $color-light-blue;
+      opacity: 0.5;
     }
   }
 }
@@ -165,17 +160,17 @@
     display: none;
   }
 
-  .footer__menu.is-active .footer__list,
+  .footer__title.is-active .footer__list,
   .footer__menu.no-js .footer__list {
     display: block;
   }
 
 
-  .footer__menu.is-active .footer__open-icon {
+  .footer__title.is-active .footer__open-icon {
     display: none;
   }
 
-  .footer__menu.is-active .footer__close-icon {
+  .footer__title.is-active .footer__close-icon {
     display: block;
   }
 
@@ -186,4 +181,12 @@
   .footer__close-icon {
     display: none;
   }
+}
+
+.accordeon {
+  transition: 0.4s;
+}
+
+.accordeon.is-active ~ .footer__list {
+  display: block;
 }
