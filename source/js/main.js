@@ -7,6 +7,7 @@ const footerToggle = document.querySelectorAll('.footer__toggle');
 const footerMenu = document.querySelectorAll('.footer__menu');
 const aboutButton = document.querySelector('.about__button');
 const descriptionExtra = document.querySelector('.about__description--extra');
+const acc = document.querySelectorAll('.accordion');
 
 aboutButton.addEventListener('click', () => {
   descriptionExtra.classList.toggle('is-active');
@@ -22,16 +23,16 @@ footerMenu.forEach((menu) => {
   menu.classList.remove('no-js');
 });
 
-let acc = document.querySelectorAll('.accordeon');
 
-acc.forEach(item => {
-  item.addEventListener('click', e => {
-    if (e.target.classList.contains('is-active')) {
-      e.target.classList.remove('is-active');
+acc.forEach((item) => {
+  item.addEventListener('click', (e) => {
+    const parent = e.target.closest('.footer__menu');
+    if (parent.target.classList.contains('is-active')) {
+      parent.target.classList.remove('is-active');
       return;
     }
-    acc.forEach(e=>e.classList.remove('is-active'));
-    e.target.classList.add('is-active');
+    acc.forEach((e) => e.closest('.footer__menu').classList.remove('is-active'));
+    parent.classList.add('is-active');
   });
 });
 

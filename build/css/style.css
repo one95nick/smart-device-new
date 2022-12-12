@@ -2151,13 +2151,13 @@ main {
     display: none;
   }
 }
-.accordeon {
+.accordion {
   -webkit-transition: 0.4s;
   -o-transition: 0.4s;
   transition: 0.4s;
 }
 
-.accordeon.is-active ~ .footer__list {
+.accordion.is-active ~ .footer__list {
   display: block;
 }
 

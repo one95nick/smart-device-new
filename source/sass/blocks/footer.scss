@@ -183,10 +183,10 @@
   }
 }
 
-.accordeon {
+.accordion {
   transition: 0.4s;
 }
 
-.accordeon.is-active ~ .footer__list {
+.accordion.is-active ~ .footer__list {
   display: block;
 }
