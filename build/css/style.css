@@ -1418,11 +1418,6 @@ main {
   }
 }
 
-.callback-form--modal textarea {
-  min-width: 100%;
-  margin-bottom: 18px;
-}
-
 .callback-form__input-wrapper input::-webkit-input-placeholder, .callback-form textarea::-webkit-input-placeholder {
   font-size: 16px;
   line-height: 22px;
@@ -1481,6 +1476,7 @@ main {
 
 .callback-form--modal textarea {
   min-width: 100%;
+  margin-bottom: 18px;
 }
 .callback-form--modal textarea:hover {
   opacity: 0.5;
