@@ -26,7 +26,7 @@
 }
 
 .callback-form__input-wrapper input {
-  width: 48%;
+  width: 47.5%;
   height: 50px;
   padding-left: 15px;
 
@@ -92,11 +92,11 @@
     margin-bottom: 23px;
     padding-top: 22px;
   }
+}
 
-  &--modal {
-    min-width: 100%;
-    margin-bottom: 18px;
-  }
+.callback-form--modal textarea {
+  min-width: 100%;
+  margin-bottom: 18px;
 }
 
 .callback-form__input-wrapper input::placeholder,
@@ -130,7 +130,7 @@
 .callback-form__btn {
   width: 48%;
   margin-right: 50px;
-  padding: 13px 11%;
+  padding: 13px 12%;
 
   font-weight: 700;
   font-size: 16px;
@@ -146,7 +146,9 @@
   cursor: pointer;
 
   @media (max-width: $max-tablet-width) {
+    width: 45%;
     margin-right: 85px;
+    padding: 13px 7%;
   }
 
   @media (max-width: $max-mobile-width) {

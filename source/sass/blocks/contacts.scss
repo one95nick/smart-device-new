@@ -76,11 +76,13 @@
   }
 
   &--button {
-    margin-left: auto;
+    margin-top: -10px;
+    margin-left: 12.3%;
 
     font-weight: 700;
     font-size: 14px;
     line-height: 16px;
+    font-family: $ff-primary;
     text-align: center;
     text-transform: uppercase;
 
@@ -101,13 +103,17 @@
 
 .contacts__logo {
   flex-shrink: 0;
-  margin-right: 13%;
+  margin-right: 12%;
   padding: 30px 0 35px 0;
 
   cursor: pointer;
 
+  @media (max-width: $vp-1280) {
+    margin-right: 3%;
+  }
+
   @media (max-width: $max-tablet-width) {
-    margin-right: 49%;
+    margin-right: 48.5%;
     padding-top: 20px;
     padding-bottom: 25px;
   }

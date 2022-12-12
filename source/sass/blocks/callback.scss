@@ -24,11 +24,11 @@
 .callback::after {
   content: "";
   position: absolute;
-  top: 29%;
+  top: 29.5%;
   left: 18%;
 
   display: block;
-  width: 30%;
+  width: 26.5%;
   height: 40%;
 
   background-image: url("../img/backgrounds/paper_plane.png");
@@ -47,14 +47,14 @@
 .callback__wrapper {
   padding-top: 165px;
   padding-bottom: 250px;
-  padding-left: 50%;
+  padding-left: 51.6%;
 
   color: $color-default-white;
 
   @media (max-width: $max-tablet-width) {
     padding-top: 46px;
     padding-bottom: 125px;
-    padding-left: 50px;
+    padding-left: 0;
   }
 
   @media (max-width: $max-mobile-width) {
@@ -88,7 +88,7 @@
 
 .callback__wrapper p {
   margin: 0;
-  margin-bottom: 35px;
+  margin-bottom: 36px;
   padding: 0;
 
   font-size: 16px;

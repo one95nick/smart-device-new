@@ -1,5 +1,5 @@
 .about {
-  padding-top: 13px;
+  padding-top: 9px;
   padding-bottom: 80px;
 
   color: $color-dark-blue;
@@ -7,9 +7,9 @@
   background-color: $color-alice-blue;
 
   @media (max-width: $max-tablet-width) {
-    padding-top: 10px;
-    padding-bottom: 80px;
-    padding-left: 176px;
+    padding-top: 5px;
+    padding-bottom: 40px;
+    padding-left: 0;
   }
 
   @media (max-width: $max-mobile-width) {
@@ -22,11 +22,11 @@
 
 .about__wrapper {
   padding-bottom: 40px;
-  padding-left: 30%;
+  padding-left: 31.2%;
 
   background-image: url("../img/backgrounds/year.png");
   background-repeat: no-repeat;
-  background-position: 20% 0;
+  background-position: 19.8% -13px;
   background-size: 150px 320px;
 
   @media (min-resolution: 2dppx) {
@@ -34,22 +34,28 @@
   }
 
   @media (max-width: $vp-1280) {
-    background-position: 10% 0;
+    padding-left: 29.2%;
+
+    background-position: 7.5% -9px;
   }
 
   @media (max-width: $max-mobile-width) {
+    padding-left: 8%;
+
     background-image: none;
   }
 }
 
 .about__title {
   margin: 0;
-  margin-bottom: 26px;
+  margin-top: 4px;
+  margin-bottom: 27px;
 
   font-weight: 400;
   font-size: 36px;
 
   @media (max-width: $max-mobile-width) {
+    margin-top: 0;
     margin-bottom: 19px;
 
     font-size: 28px;
@@ -98,7 +104,7 @@
 }
 
 .about__button {
-  padding: 13px 53px;
+  padding: 13px 50px;
 
   font-weight: 700;
   font-size: 14px;

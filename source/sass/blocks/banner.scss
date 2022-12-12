@@ -1,17 +1,18 @@
 .banner {
-  padding-top: 185px;
-  padding-bottom: 283px;
+  padding-top: 305px;
+  padding-bottom: 279px;
   padding-left: 125px;
 
   color: $color-white;
 
   @media (max-width: $max-tablet-width) {
-    padding-top: 80px;
+    padding-top: 180px;
     padding-bottom: 205px;
-    padding-left: 50px;
+    padding-left: 0;
   }
 
   @media (max-width: $max-mobile-width) {
+    padding-top: 150px;
     padding-bottom: 190px;
     padding-left: 0;
   }
@@ -46,7 +47,7 @@
 .banner p {
   max-width: 685px;
   margin: 0;
-  margin-bottom: 50px;
+  margin-bottom: 48px;
   padding: 0;
 
   font-weight: 400;
@@ -69,7 +70,7 @@
 .banner a {
   display: inline-block;
   vertical-align: baseline;
-  padding: 15px 25px;
+  padding: 17px 27px;
 
   font-weight: 700;
   font-size: 18px;

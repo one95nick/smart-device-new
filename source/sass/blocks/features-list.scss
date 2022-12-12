@@ -137,10 +137,16 @@
 }
 
 .features-list__item-icon {
-  fill: $color-light-blue;
   position: absolute;
   top: 40px;
   left: 40px;
+
+  fill: $color-light-blue;
+
+  @media (max-width: $max-mobile-width) {
+    top: 27px;
+    left: 23px;
+  }
 }
 
 .features-list__item:hover .features-list__item-icon {

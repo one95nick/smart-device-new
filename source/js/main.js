@@ -27,8 +27,8 @@ footerMenu.forEach((menu) => {
 acc.forEach((item) => {
   item.addEventListener('click', (e) => {
     const parent = e.target.closest('.footer__menu');
-    if (parent.target.classList.contains('is-active')) {
-      parent.target.classList.remove('is-active');
+    if (parent.classList.contains('is-active')) {
+      parent.classList.remove('is-active');
       return;
     }
     acc.forEach((e) => e.closest('.footer__menu').classList.remove('is-active'));
