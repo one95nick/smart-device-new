@@ -1,12 +1,17 @@
 .contacts {
-  position: fixed;
   z-index: 5;
 
   display: flex;
+  justify-content: center;
   align-items: center;
   width: 100%;
 
   background: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
+
+  @media (min-width: $vp-1024) {
+    position: fixed;
+  }
+
 
   @media (max-width: $max-mobile-width) {
     padding-top: 10px;
@@ -105,8 +110,6 @@
   flex-shrink: 0;
   margin-right: 12%;
   padding: 30px 0 35px 0;
-
-  cursor: pointer;
 
   @media (max-width: $vp-1280) {
     margin-right: 3%;

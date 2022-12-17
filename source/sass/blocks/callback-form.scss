@@ -22,6 +22,10 @@
   &--modal {
     flex-direction: column;
     margin-bottom: 20px;
+
+    @media (max-height: 760px) {
+      margin-bottom: 5px;
+    }
   }
 }
 
@@ -50,6 +54,10 @@
 
   &:not(:last-child) {
     margin-bottom: 20px;
+
+    @media (max-height: 760px) {
+      margin-bottom: 5px;
+    }
   }
 
   &:hover {
@@ -114,12 +122,25 @@
   }
 }
 
+.callback-form__submit-wrapper label {
+  order: 2;
+}
+
+.callback-form__submit-wrapper button {
+  order: 1;
+}
+
 .callback-form--modal textarea {
   min-width: 100%;
   margin-bottom: 18px;
 
   &:hover {
     opacity: 0.5;
+  }
+
+  @media (max-height: 760px) {
+    min-height: 50px;
+    margin-bottom: 5px;
   }
 }
 
