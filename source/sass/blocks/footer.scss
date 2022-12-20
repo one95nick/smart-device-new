@@ -28,7 +28,8 @@
 }
 
 .footer__nav {
-  margin-right: 9.3%;
+  margin-right: 3.3%;
+  margin-left: 5.5%;
 
   @media (max-width: $vp-1280) {
     margin-right: 3%;
@@ -170,6 +171,7 @@
 
   .footer__title {
     position: relative;
+
     padding: 20px 0;
 
     &::before {
