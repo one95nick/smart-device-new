@@ -22,10 +22,6 @@
   &--modal {
     flex-direction: column;
     margin-bottom: 20px;
-
-    @media (max-height: 760px) {
-      margin-bottom: 5px;
-    }
   }
 }
 
@@ -54,10 +50,6 @@
 
   &:not(:last-child) {
     margin-bottom: 20px;
-
-    @media (max-height: 760px) {
-      margin-bottom: 5px;
-    }
   }
 
   &:hover {
@@ -136,11 +128,6 @@
 
   &:hover {
     opacity: 0.5;
-  }
-
-  @media (max-height: 760px) {
-    min-height: 50px;
-    margin-bottom: 5px;
   }
 }
 
